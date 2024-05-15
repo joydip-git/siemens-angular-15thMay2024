@@ -1,0 +1,161 @@
+https://github.com/joydip-git/siemens-angular-15thMay2024
+
+s/w needed:
+Node JS
+Visual Studio Code
+
+LTS 			Current
+20.13.1		22.1.0
+
+
+JavaScript
+TypeScript
+Node JS (server side framework)
+
+Angular/React/Vue (client-side library/framework)
+
+JS framework
+SPA 
+
+
+
+DOM => Document Object Model (HTML)
+
+http://...../about
+
+index.html
+
+<html>
+	<head></head>
+	<body>
+		
+	</body>
+</html>
+
+deisgn/view:
+home.js
+<h2 onmousover="call()">Welcome to my site</h2>
+code:
+function Home(){
+	function click(){}
+}
+
+<app-home></app-home>
+
+<Home></Home>
+
+
+chrome => V8
+safari => JS Core
+firefox => Spidermonkey
+
+Ryan Dahl (2009)
+
+document.getElementById()
+ 
+document.body.appendChild(document.createElement('p'))
+
+JS execution environments:
+1. browser - JS engine
+2. Node JS - JS engine
+
+JS:
+	object-based, loosely typed programming language
+
+data types:
+	string, boolean , number, object , function
+	undefined, NaN, Infinity etc.
+
+
+Angular JS [1.x]
+
+Angular => 2.0 => 17
+
+
+ECMAScript
+
+
+2015 => ES6
+
+
+2024 => ES17
+
+
+transpiler: babel
+ES6+ => ES5, 3,2
+
+transpiler: tsc
+TS => JS
+
+install package:
+a. global => npm i <name> --location=global
+path: C:\Users\<user-name>\AppData\Roaming\npm
+b. local => npm i <name>
+node_modules
+
+for dev dependencis:
+old: >npm i <name> --save-dev
+new: >npm i <name> -D
+
+for complete dependencis:
+old: >npm i <name> --save
+new: >npm i <name>
+
+
+config:
+package.json
+create:
+1. manually
+2. npm tool
+		> npm init
+		> npm init --yes
+
+tsc configuration:
+tsconfig.json
+
+a. manually
+b. tsc tool: >tsc --init
+
+//window.alert('hello...')
+console.log('hello...')
+
+var x = 10
+var trainer = 'Joydip'
+var isTrue = false
+
+console.log(x, typeof x)
+console.log(trainer, typeof trainer)
+console.log(isTrue, typeof isTrue)
+
+var anilObject = {
+    name: 'anil',
+    id: 1,
+    salary: 1000,
+    print: function () {
+        return `${this.name}, ${this.id}, ${this.salary}`
+    }
+}
+
+console.log(anilObject.name)
+console.log(anilObject['salary'])
+console.log(anilObject.print())
+
+function add(a, b) {
+    return a + b
+}
+console.log(add(12, 13))
+
+var value = 10
+//code
+value = false
+console.log(value.toExponential(2))
+
+
+
+
+
+
+
+
+
+

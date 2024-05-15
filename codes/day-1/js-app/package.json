@@ -1,0 +1,16 @@
+{
+  "name": "js-app",
+  "version": "1.0.0",
+  "description": "simple js/ts app",
+  "scripts": {
+    "create-config": "tsc --init",
+    "compile": "tsc --watch",
+    "app": "node ./build/main.js"
+  },
+  "keywords": [],
+  "author": "joydip",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

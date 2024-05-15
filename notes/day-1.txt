@@ -114,6 +114,8 @@ data:
 		array of employee objects
 
 manager
+	managercontract.ts
+	managercontract=>	
 	employeemanager.ts
 	employeemanager
 		- add(e:employee)
@@ -123,6 +125,8 @@ manager
 		- fetch(id:number)
 
 index.ts
+
+
 create employee objects
 save them in the repo
 delete an object from repo
@@ -131,15 +135,30 @@ fetch all objects from repo
 fetch a single object from repo
 
 
+module: api to expose members of one file
 
+module formats:
+1. common js [used by Node JS]
+	a. to export: module.exports = {prop1:member1,....}
+	b. to import: const x = require('...')
 
+2. ES6 module format:
+	a. to export: export statement
+	b. to import: import statement
 
+3. amd (asynchronous module definition) format
+		define(['./utility'],
+			function(){
+				add(!2,3)
+			}
+		)
+d. umd (universal module definition) format
+		require([], function(){})
 
-
-
-
-
-
+module loader:
+	1. common js module lodaer (used by Node JS)
+	2. require js => used for browser. it understands AMD format only
+	3. system js
 
 
 

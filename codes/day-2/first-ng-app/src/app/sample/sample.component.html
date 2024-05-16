@@ -1,0 +1,8 @@
+<p [style.width.px]="width">
+    {{message}}
+</p>
+<br>
+<div>
+    <label for="txtMessage">New Message: &nbsp;</label>
+    <input type="text" id="txtMessage" (keyup)="changeMessage(txt.value)" #txt />
+</div>

@@ -30,3 +30,89 @@ Reactive extensions: [reactivex.io]
 	objects => observable, observer, subject, scheduler
 	operators => map, filter etc.
 	
+Angular Features:
+	- components
+	- mvvm/mvc model
+	- angular modules
+	- data binding and event binding
+	- separation of concern
+	- dependency injection framework
+	- built-in routing feature
+	- forms data handling
+	etc.
+
+assets				type			decorator functions
+-----------------------------------------------------------
+1. component => 	class			@Component
+2. Pipe => 			class			@Pipe
+3. Directive => 	class			@Directive
+
+4. Service => 		class			---- [@Injectable]
+
+5. Module => 		class			@NgModule
+
+@angular/core
+@angular/common
+@angular/forms
+@angular/platform-browser
+@angular/platform-browser-dynamic
+
+
+create an angular app:
+CLI tool: @angular/cli
+
+install:
+>npm i @angular/cli --location=global
+
+uninstallation:
+>npm uninstall @angular/cli --location=global
+
+
+Component
+	=> *.component.html
+	=> *.component.css
+	=> *.component.ts
+
+import {Component} from '@angular/core' 
+
+@Component({
+	selector:'app-sample',
+	templateUrl:'./*.component.html',
+	//template:`<h2>Welcome</h2>`
+	styleUrls:['./*.component.css']
+})
+export class SampleComponent{
+}
+
+import {NgModule} from '@angular/core' 
+@NgModule({
+	//to register - components, directives, pipes
+	declarations:[SampleComponent, SampleDirective, SamplePipe],
+
+	//to register - modules (feature modules or built-in modules of angular)
+	imports:[FormsModule, YourModule],
+	
+	//to register service providers
+	providers:[SampleService],
+
+	bootstrap:[],
+	exports:[]
+})
+export class SampleModule{
+}
+
+
+binding:
+1. data binding: to pass (bind) data from code to view (to an element)
+	a. interpolation: {{}}
+	b. property binding: <html-element [attribute-name]="data">
+
+2. event binding: to pass (bind) data from view to code
+
+<html-element #variable >
+#variable => template reference variable
+
+
+
+
+

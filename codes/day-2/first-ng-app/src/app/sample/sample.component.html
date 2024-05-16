@@ -1,8 +1,44 @@
-<p [style.width.px]="width">
+<!-- <p [style.width.px]="width">
     {{message}}
 </p>
 <br>
 <div>
     <label for="txtMessage">New Message: &nbsp;</label>
     <input type="text" id="txtMessage" (keyup)="changeMessage(txt.value)" #txt />
+</div> -->
+
+<form>
+    <fieldset>
+        <legend>
+            Calculator
+        </legend>
+        <div>
+            <label for="radioAdd">Add</label>
+            <input type="radio" id="radioAdd" name="calculation" (change)="updateChoice(1)" />
+            &nbsp;&nbsp;&nbsp;
+            <label for="radioSub">Subtract</label>
+            <input type="radio" id="radioSub" name="calculation" (change)="updateChoice(2)" />
+            &nbsp;&nbsp;&nbsp;
+            <label for="radioMulti">Multiply</label>
+            <input type="radio" id="radioMulti" name="calculation" (change)="updateChoice(3)" />
+            &nbsp;&nbsp;&nbsp;
+            <label for="radioDiv">Divide</label>
+            <input type="radio" id="radioDiv" name="calculation" (change)="updateChoice(4)" />
+        </div>
+        <div>
+            <label for="txtFirst">First:&nbsp;</label>
+            <input type="text" id="txtFirst" (keyup)="updateFirst(firstTxt.value)" [value]="first" #firstTxt />
+        </div>
+        <div>
+            <label for="txtSecond">Second:&nbsp;</label>
+            <input type="text" id="txtSecond" [value]="second" #secondTxt (keyup)="updateSecond(secondTxt.value)" />
+        </div>
+        <div>
+            <button type="button" (click)="calculate()">Calculate</button>
+        </div>
+    </fieldset>
+</form>
+<div>
+    <label for="txtResult">Result:&nbsp;</label>
+    <input type="text" id="txtResult" readonly [value]="result" />
 </div>

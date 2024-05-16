@@ -112,6 +112,10 @@ binding:
 <html-element #variable >
 #variable => template reference variable
 
+Passing data between nested and parent component:
+a. passing data from parent to nested component
+b. passing data from nested to parent component
+
 
 
 

@@ -1,0 +1,32 @@
+1. JS Basics - data types, keywords, operators, control flow statements
+2. JS array - push, splice,slice, shift, unshift etc. 
+					  find, findIndex, filter, map, reduce, sort etc.
+3. Hoisting, execution and compilation
+4. function execution context and context stack
+5. variable object, scope, this property of a FEC
+6. new features: 
+	- class, constructor, super, extends
+	- let and const
+	- spread operator
+	- object destructuring
+	- arrow function
+	- promise
+
+7. TypeScript
+		- static type checking
+		- data typification
+		- type inference
+		- class data member declaration
+		- access specifiers (public, private and protected)
+		- interface [as collection of abstract methods and as also as type]
+		- generic
+		- abstract class
+		- custom data type 
+
+
+Reactive extensions: [reactivex.io]
+	- RxJS => [rxjs.dev]
+
+	objects => observable, observer, subject, scheduler
+	operators => map, filter etc.
+	

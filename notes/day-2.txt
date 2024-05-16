@@ -114,7 +114,15 @@ binding:
 
 Passing data between nested and parent component:
 a. passing data from parent to nested component
+	declare a property using @Input() decorator in the nested component
+	bind that property in the parent view with the data from parent code
+
 b. passing data from nested to parent component
+	declare a property with @Output() decorator and assign that to an EventEmitter<T> object
+	Fire the event and emit data
+	handle that event in parent's view by attaching an event handler from parent code
+
+	
 
 
 

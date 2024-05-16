@@ -1,22 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-sample',
-  templateUrl: './sample.component.html',
-  styleUrl: './sample.component.css'
+  selector: 'app-calculator',
+  templateUrl: './calculator.component.html',
+  styleUrl: './calculator.component.css'
 })
-export class SampleComponent {
-  // message = 'This is sample'
-  // width = 300
-
-  // changeMessage(newMessage: string) {
-  //   this.message = newMessage
-  // }
-
+export class CalculatorComponent {
   first = 0
   second = 0
   result = 0
   choice = 0
+  @Output() resultCalculated = new EventEmitter<number>()
 
   updateFirst(value: string) {
     this.first = Number(value)
@@ -50,6 +44,6 @@ export class SampleComponent {
         this.result = this.first + this.second
         break;
     }
-    console.log(this.choice, this.result);
+    this.resultCalculated.emit(this.result)
   }
 }

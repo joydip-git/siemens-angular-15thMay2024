@@ -1,3 +1,8 @@
 <h2> Welcome to Angular </h2>
 <br />
-<app-sample></app-sample>
+<app-calculator (resultCalculated)="receiveResult($event)">
+
+</app-calculator>
+<app-calculation-result [result]="calculationResult">
+
+</app-calculation-result>

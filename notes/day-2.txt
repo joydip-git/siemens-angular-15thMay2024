@@ -122,6 +122,55 @@ b. passing data from nested to parent component
 	Fire the event and emit data
 	handle that event in parent's view by attaching an event handler from parent code
 
+
+directive:
+	a. structual: which manipulates DOM
+		*ngFor, *ngIf, *ngSwitch
+	b. attribute: extends behavior of existing elements
+		ngClass, ngStyle, ngModel, ngForm
+	c. component
+
+*ngFor 
+
+@angular/platform-browser
+
+@NgModule({
+	declarations:[],
+	exports:[CommonModule],
+	imports:[CommonModule]
+})
+export class BrowserModule{
+}
+
+
+@angular/common
+
+@NgModule({
+	declarations:[NgForOf],
+	exports:[NgForOf]
+})
+export class CommonModule{
+}
+
+@Directive({
+	selector:'[ngFor]'
+})
+export class  NgForOf{
+....
+}
+
+
+event-name		interface-name 	method-name		
+--------------------------------------------------
+x							OnX				ngOnX	
+
+
+
+
+
+
+
+
 	
 
 

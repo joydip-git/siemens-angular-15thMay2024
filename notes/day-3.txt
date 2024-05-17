@@ -37,6 +37,21 @@ module name: HttpClientModule
 export class HttpClientModule{
 }
 
+Pipe:
+
+@Pipe({
+	name:'postfilter'
+})
+class FilterPostPipe implements PipeTransform{
+	//... => rest operator
+	transform(value:Post[], ...args:string[]):Post[]{
+		return value
+	}
+}
+
+(posts|postfilter:filter.value)
+	
+
 
 
 

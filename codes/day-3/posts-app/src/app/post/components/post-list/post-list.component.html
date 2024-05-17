@@ -1,0 +1,34 @@
+<ng-template #loadingtemplate>
+    <span>Loading...</span>
+</ng-template>
+
+<ng-template #errortemplate>
+    <span>{{errorMessage}}</span>
+</ng-template>
+
+<ng-template #nodatatemplate>
+    <span>No record found</span>
+</ng-template>
+
+<div *ngIf="isDataFetchingOver;else loadingtemplate">
+    <div *ngIf="errorMessage==='';else errortemplate">
+        <div>
+            <label for="txtFilter">Filter By: &nbsp;</label>
+            <input type="text" id="txtFilter" [value]="filterText" (keyup)="updateFilterText(filter.value)" #filter />
+        </div>
+        <table *ngIf="posts;else nodatatemplate ">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of (posts|postfilter:filterText)">
+                    <td>{{p.id}}</td>
+                    <td>{{p.title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

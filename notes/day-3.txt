@@ -1,0 +1,52 @@
+service:
+	1. create service
+	2. register service provider
+		with "providers" array [in a module or in an asset]
+		a. at the asset level (available ONLY for this asset)
+		b. at the feature module (available through out the feature module)
+		c. at the root module (available through out the app)
+		
+		'token':'PostService'
+		'class': PostService
+
+		custom provider configuration:
+		{
+			provide:'POST_SERVICE', //token name
+			useClass: PostService 	//service type the token represents
+		}
+	
+	3. consume the service
+
+@Injectable() => any asset (a component, a directive, a pipe, a service, a module) who wants dependency injection (via constructor) MUST be decorated with @Injectable()
+
+since @Component, @Directive, @Pipe, @NgModule already apply @Injectable, hence you do not need to use @Injectable explicitly at the top of either Component, Directive, Pipe or Module
+Service class, on the other hand, does not required any decorator, hence if the service needs a dependency injection, then explicitly @Injectable should be used on it
+
+Http requests from angular:
+	
+built-in service class: HttpClient
+methods: get(), put(), post(), delete(), .....
+
+package-name: @angular/common/http
+module name: HttpClientModule
+
+@NgModule({
+
+	providers:[HttpClient]
+})
+export class HttpClientModule{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

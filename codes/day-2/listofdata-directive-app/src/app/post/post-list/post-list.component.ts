@@ -1,29 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Post } from '../../models/post';
 import { PostService } from '../../services/post.service';
+import { SERVICE_TOKEN } from '../../config/constants';
+import { ServiceContract } from '../../services/service-contract';
 
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
-  styleUrl: './post-list.component.css'
+  styleUrl: './post-list.component.css',
+  //providers: [PostService]
 })
 export class PostListComponent implements OnInit {
   posts?: Post[];
   isDataFetchingOver = false
   errorMessage = ''
+  //private ps: ServiceContract<Post>;
 
-  constructor(private ps: PostService) {
-
+  constructor(@Inject(SERVICE_TOKEN) private ps: ServiceContract<Post>) {
+    //this.ps = ps
   }
   ngOnInit(): void {
-    //this.posts = this.ps.getPosts()
-    // setTimeout(
-    //   () => {
     this.ps
-      .getPosts()
+      .getAll()
       .subscribe({
         next: (data) => {
-          this.posts = data
+          this.posts = data.slice(0, 10)
           this.errorMessage = ''
           this.isDataFetchingOver = true
         },
@@ -33,8 +34,5 @@ export class PostListComponent implements OnInit {
           this.isDataFetchingOver = true
         }
       })
-    //   },
-    //   2000
-    // )
   }
 }

@@ -10,7 +10,7 @@ import { PostModule } from './post/post.module';
   imports: [
     BrowserModule, PostModule
   ],
-  providers: [],
+  //providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
